@@ -1,0 +1,87 @@
+#:kivy 2.1.0
+<ButtonsClick@Button>:
+    size: 75, 50
+    size_hint: None, None
+
+<ExerciseButton>:
+    
+    color: 1, 1, 0
+
+<BoxLayout>:
+    orientation: 'horizontal'
+    
+    FloatLayout:
+
+        canvas.before:
+            Color:
+                rgb: (1,1,1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+       
+        ExerciseButton:
+            color: (0,0,0)
+            text: str(round(root.number))
+            text_size: self.size
+            halign: 'center'
+            valign: 'middle'
+            size: 80, 60
+            size_hint: None, None
+        
+            pos_hint: {"x":.4, "y":.5}
+            
+
+        ButtonsClick:
+            text: "start"
+            on_press: root.start()
+            pos_hint: {"x":.6, "y": .2}
+        ButtonsClick:
+            text: "stop"
+            on_press: root.stop()
+            pos_hint: {"x":.2, "y": .2}
+
+        ButtonsClick:
+            text: "reset"
+            on_press: root.reset()
+            pos_hint: {"x":.4, "y": .2}
+    
+    
+        TextInput:
+            text: "sdfasdfkjaskldöfjaslköfj"
+            size: 75, 50
+            color: 0,0,0,
+            size_hint: None, None
+            pos_hint: {"x":.2, "y": .5}
+    GridLayout:
+        cols: 2
+        rows: 5
+        
+        ExerciseButton:
+            text: "0"
+
+        ExerciseButton:
+            text: "1"
+
+        ExerciseButton:
+            text: "2"
+
+        ExerciseButton:
+            text: "3"
+
+        ExerciseButton:
+            text: "4"
+
+        ExerciseButton:
+            text: "5"
+
+        ExerciseButton:
+            text: "6"
+
+        ExerciseButton:
+            text: "7"
+
+        ExerciseButton:
+            text: "8"
+
+        ExerciseButton:
+            text: "9"

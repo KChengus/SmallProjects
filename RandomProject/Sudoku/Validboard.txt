@@ -1,0 +1,6 @@
+Run a simulation of the board program to simulate different valid boards
+This process will take time because different variations of boards will come up and most of them ...
+will be invalid boards.
+If a board is invalid (which will be about 99% of the case) ignore that and simulate another board
+If however the board is valid meaning that for every abritrary cell in the board is a unique number
+in it's respective row column and square, the board should be saved somehow.

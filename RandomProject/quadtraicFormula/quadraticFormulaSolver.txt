@@ -1,0 +1,28 @@
+Quadratic formula
+f(x) = ax^2 + bx + c
+ax2 + bx + c = 0
+x2 + bx/a + c/a = 0
+(x + (b/2a))^2 - (b/2a)^2 + c/a = 0;
+
+(x + b/2a)^2 = -4ca/4a^2 + (b^2 / (4a^2))
+(x + b/2a)^2 = (b^2 - 4ac) / 4a^2
+x = sqrt(b^2 - 4ac) / 2a - b/2a
+x = (-b ± sqrt(b^2 - 4ac)) / 2a
+
+if f(x) = 0 then:
+x = (-b ± sqrt(b^2 - 4ac)) / 2a
+
+else:
+x = (-b ± sqrt(b^2 - 4a(c-f(x)))) / 2a
+
+input:
+f(x) = ax^2 + bx + c
+
+output:
+the solution of f(x) is ...
+
+Problem
+* identify all variables by splitting the input
+* complex numbers
+* not a int output
+* 
