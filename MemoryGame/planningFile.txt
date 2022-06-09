@@ -1,0 +1,15 @@
+Memory Game
+This program is a memory game program, that will prompt the user with several different games ...
+that tests ones memory capabilities.
+
+Purpose
+Thsi programi s mant for a self project that will improve my overrall memory skills
+
+Goals
+Make a main menu with different 
+
+Plan
+
+Ideas
+
+Advanced

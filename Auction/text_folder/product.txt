@@ -1,0 +1,4 @@
+Tesla_Model_3 650000
+Nvidia_GeForce_RTX_3060_Ti 5000
+Ambush_computer_case 1000
+Nissan_GTR 1000000

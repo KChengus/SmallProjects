@@ -87,13 +87,8 @@ class basicWindow(QWidget):
     def switch(self, r, c, color):
         self.grid_layout.itemAtPosition(r, c).widget().setStyleSheet(color)
 
-        
-            
-
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     windowExample = basicWindow()
     windowExample.show()
     sys.exit(app.exec_())
-

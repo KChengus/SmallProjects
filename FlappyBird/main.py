@@ -22,7 +22,22 @@ class Game(settings):
         # set timed events
         pygame.time.set_timer(self.create_pipe_event, self.CREATE_PIPE_TIME)
 
+        # highscore
+        self.myfont = pygame.font.SysFont("monospace", 15)
+
+        self.highScore = self.readHighScoreFile()
+        self.score = 0
         self.pipes = list()
+
+    def readHighScoreFile(self):
+
+        with open(self.highScoreFile) as f:
+            highScore = f.read().strip()
+        try:
+            n = int(highScore)
+        except ValueError as e:
+            n = 0
+        return n
 
 
     def handle_event(self):
@@ -58,15 +73,19 @@ class Game(settings):
 
     def draw_picture(self):
         # draw bird
-        # delete pipes that go overboard
+        # delete pipes that go overboard 
         if self.pipes and self.pipes[0].pos[0] < 0:
+            self.score += 1
             self.pipes.pop(0)
 
         for pipe in self.pipes:
             self.display.blit(pipe.picture_up, pipe.pos)
             self.display.blit(pipe.picture_down, (pipe.pos[0], 0))
-            
         self.display.blit(self.picture, self.fBird.pos)
+        label_score = self.myfont.render("Score: " + str(self.score), 1, (0 ,0 ,0))
+        label_highScore = self.myfont.render("HighScore: " + str(self.highScore), 1, (0 ,0 ,0))
+        self.display.blit(label_score, (self.display_width - 150, 50))
+        self.display.blit(label_highScore, (self.display_width - 150, 0))
 
     def detectCollision(self):
         # bird position and size
@@ -79,6 +98,9 @@ class Game(settings):
                 break
             elif (xPosBird < pipe.pos[0]):
                 break
+        # off canvas
+        if not (0 <= yPosBird < self.display_height):
+            self.running = False;
         
     def main(self):
         clock = pygame.time.Clock()
@@ -90,7 +112,9 @@ class Game(settings):
             self.detectCollision()
             pygame.display.update()
             clock.tick(self.fps)
-
+        if self.score > self.highScore:
+            with open(self.highScoreFile, "w") as f:
+                f.write(str(self.score))
 
 if __name__ == "__main__":
     Game().main()

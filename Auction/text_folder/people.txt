@@ -1,0 +1,4 @@
+Kevin 18 Working_class 1000000
+Kristoffer 30 Poor 1690000
+David 10 Upper_class 65200000
+Chad 23 Middle_class 50820000

@@ -6,6 +6,10 @@ class settings:
 
     fps = 100
 
+    # high score
+    highScoreFile = "highScore.txt"
+
+
     # bird settings
     bird_ramp_up_multiplicator = 1
     bird_ramp_up_speed = 2

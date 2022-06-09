@@ -1,0 +1,20 @@
+Auction Items List
+
+Computer and Computer Parts
+- Motherboard
+- Computer Case
+- Graphics Card
+- CPU (Central Processing Unit)
+- RAM
+- Harddrive
+
+Cars
+- Tesla
+- Ferrari
+- Lamborghini
+
+
+
+Extra Intermediate
+- Create a program that gets the average price of said product
+- Make an animation of an auction with people putting money
