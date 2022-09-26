@@ -1,4 +1,4 @@
-from TypeRacer import whole_text_pyfile
+import readTestFile
 import pygame
 import sys
 import time
@@ -21,7 +21,7 @@ class Settings:
         self.start_timer = 0 # temportary value
 
         #self.all_words = WordFile().read_content().split()
-        self.all_words = whole_text_pyfile.words
+        self.all_words = readTestFile.words
         #print(self.all_words)
         self.amount_words = 100
 
