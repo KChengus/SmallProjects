@@ -1,4 +1,3 @@
-package Othello;
 
 public class Othello{
 

@@ -1,5 +1,3 @@
-package Othello;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -19,7 +17,7 @@ import java.awt.Color;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
-public class swingTest extends JFrame implements ActionListener {
+public class Main extends JFrame implements ActionListener {
 	// definerar serialID
 	private static final long serialVersionUID = 1L;
 	// defienrar brädan och knappar
@@ -31,7 +29,7 @@ public class swingTest extends JFrame implements ActionListener {
 	private Map<Integer, Color> colorMap = new HashMap<>();
 	
 	// definerar utseendet för hela panelen
-	private swingTest() { 
+	private Main() { 
 		
 		boardGUI = new JPanel(new GridLayout(8, 8));
 		boardGUI.setVisible(true);
@@ -277,7 +275,7 @@ public class swingTest extends JFrame implements ActionListener {
 	}
 	// main
 	public static void main(String args[])  {
-		swingTest st = new swingTest();
+		Main st = new Main();
 		st.start();
 		st.setVisible(true);
 	}

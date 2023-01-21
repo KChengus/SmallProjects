@@ -1,4 +1,3 @@
-package Othello;
 
 // child class to Player
 public class Human extends Player {
